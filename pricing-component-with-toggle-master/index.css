@@ -1,0 +1,218 @@
+* { box-sizing: border-box; }
+
+body {
+  background: url(images/bg-bottom.svg) left bottom no-repeat, url(images/bg-top.svg) right top no-repeat;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: #eee;
+}
+
+
+.container {
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.flex {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+/* pricing */
+
+.pricing.flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing h1 {
+    color: hsl(234, 14%, 50%);
+}
+
+.pricing p {
+    color: hsl(234, 14%, 50%);
+    
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right bottom ,hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:hover {
+    background: linear-gradient(to right bottom ,hsl(236, 72%, 85%), hsl(237, 63%, 75%));
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background: linear-gradient(to right bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  }
+
+  input:checked + .slider:hover {
+    background: linear-gradient(to right bottom ,hsl(236, 72%, 85%), hsl(237, 63%, 75%));
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/* pricing end */
+
+/* main area */
+
+.main-area div {
+  padding: 0 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+}
+
+.main-area.flex {
+  justify-content: center;
+  gap: 0;
+}
+
+.main-area h2 {
+  color: hsl(234, 14%, 50%);
+  font-size: 20px;
+  text-align: center;
+}
+
+.main-area h1 {
+  font-size: 60px;
+}
+
+.main-area p{
+  text-align: center;
+  color: hsl(234, 14%, 50%);
+  border-top: 1px solid hsl(234, 714%, 90%) ;
+  padding: 10px;
+  margin-bottom: -10px;
+}
+
+.dollar {
+  align-self: center;
+  font-size: 40px;
+  margin-right: -20px;
+}
+
+.main-area p:last-of-type {
+  border-bottom: 1px solid hsl(234, 714%, 90%);
+  margin-bottom: 50px;
+}
+
+.main-area a {
+  color: white;
+  background: linear-gradient(to right bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  padding: 10px 60px;
+  border-radius: 10px;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+
+.main-area a:hover {
+  background: none;
+  background-color: #fff;
+  color: hsl(234, 14%, 50%);
+  border: 1px solid black;
+}
+
+.middle {
+  background: linear-gradient(to right bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: white;
+  
+}
+
+div.middle {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.middle p,
+.middle h2 {
+  color: white;
+}
+
+.middle a {
+  background: none;
+  background-color: #fff;
+  color: hsl(234, 14%, 50%);
+  display: block;
+  margin-bottom: 50px;
+}
+
+.middle a:hover {
+  background: none;
+  color: white;
+  border-color: white;
+}
+
+/* main area end */
+
+
+@media (max-width: 900px) {
+  .main-area.flex {
+   flex-direction: column;
+  }
+
+  .main-area div {
+    width: fit-content;
+  }
+}
